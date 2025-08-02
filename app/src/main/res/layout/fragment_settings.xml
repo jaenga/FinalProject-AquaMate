@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- 전체 설정 화면을 감싸는 수직 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 설정 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙ 설정"
+            android:fontFamily="@font/gangwon_edu_bold"
+            android:textSize="28sp"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center" />
+
+        <!-- 닉네임 수정 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- 닉네임 섹션 제목 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☻ 닉네임 수정"
+                android:fontFamily="@font/gangwon_edu_bold"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 닉네임 입력창 -->
+            <EditText
+                android:id="@+id/editNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:hint="새 닉네임 입력"
+                android:fontFamily="@font/gangwon_edu_light"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:textColorHint="#999999"
+                android:background="@drawable/edittext_modern_background"
+                android:padding="16dp"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 저장 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="닉네임 저장"
+                android:textSize="17sp"
+                android:fontFamily="@font/gangwon_edu_light"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_modern_background"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+        <!-- 목표 수분량 수정 섹션 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- 목표 수분 섹션 제목 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="𖣓 목표 수분 섭취량 수정"
+                android:fontFamily="@font/gangwon_edu_bold"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 목표 수치 입력창 -->
+            <EditText
+                android:id="@+id/editGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gangwon_edu_light"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:textColorHint="#999999"
+                android:minHeight="56dp"
+                android:hint="예: 2000ml"
+                android:background="@drawable/edittext_modern_background"
+                android:padding="17dp"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 저장 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="목표 저장"
+                android:textSize="17sp"
+                android:fontFamily="@font/gangwon_edu_light"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_modern_background"
+                android:elevation="2dp" />
+        </LinearLayout>
+
+        <!-- 알림 설정 섹션 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="20dp">
+
+            <!-- 알림 설정 스위치 영역 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="̗̀⚠︎  수분 섭취 알림"
+                android:fontFamily="@font/gangwon_edu_bold"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 스위치 / 텍스트 가로 정렬 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/switch_container_background"
+                android:padding="16dp">
+
+                <!-- 알림 텍스트 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="알림 받기"
+                    android:fontFamily="@font/gangwon_edu_light"
+                    android:textSize="18sp"
+                    android:textColor="#333333" />
+
+                <!-- 알림 스위치 -->
+                <Switch
+                    android:id="@+id/switchAlarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

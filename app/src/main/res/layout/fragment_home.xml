@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FFFFFF">
+
+    <!-- 사용자에게 인사 및 오늘 섭취 안내 메시지 -->
+    <TextView
+        android:id="@+id/greetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임님, 오늘 마신 물은 아래와 같아요!"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:fontFamily="@font/gangwon_edu_light"
+        android:layout_marginBottom="24dp"
+        android:textAlignment="center" />
+
+    <!-- 목표 수분 섭취량 표시 -->
+    <TextView
+        android:id="@+id/goalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목표 수분 섭취량: 2000ml"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:fontFamily="@font/gangwon_edu_light"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center" />
+
+    <!-- 캐릭터 상태 이미지 (섭취율에 따라 이미지 변경) -->
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/normal"
+        android:background="@drawable/character_circle_bg"
+        android:scaleType="centerInside"
+        android:padding="25dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 회색 선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 오늘 마신 물 총량 (굵은 글씨로 강조) -->
+    <TextView
+        android:id="@+id/waterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 마신 물: 0ml"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/gangwon_edu_bold"
+        android:padding="24dp"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center" />
+
+    <!-- 기본 섭취 버튼 -->
+    <Button
+        android:id="@+id/drinkButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="+200ml 마시기"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/gangwon_edu_light"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 사용자 지정 섭취량 -->
+    <EditText
+        android:id="@+id/customAmountInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="직접 입력 (ml)"
+        android:textColorHint="#AAAAAA"
+        android:textColor="#000000"
+        android:inputType="number"
+        android:background="@drawable/edittext_bg"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:fontFamily="@font/gangwon_edu_light"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 입력한 양만큼 마시는 버튼 -->
+    <Button
+        android:id="@+id/customDrinkButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="입력한 양 만큼 마시기 💧"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:backgroundTint="#e0e0e0"
+        android:strokeColor="#020202"
+        android:strokeWidth="2"
+        android:fontFamily="@font/gangwon_edu_light" />
+
+</LinearLayout>
